@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Users can Sign Up
 
-Things you may want to cover:
+User can Sign In
 
-* Ruby version
+Users can Edit or Delete Account
 
-* System dependencies
+Each Users Have Their own
 
-* Configuration
+* Friends
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+* Can Edit or Delete Friends
 * ...
