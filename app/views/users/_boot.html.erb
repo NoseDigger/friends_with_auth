@@ -1,0 +1,9 @@
+<%= bootstrap_form_with(model: user, local: true) do |form| %>
+  <%= form.text_field :name %>
+  <%= form.text_field :age %>
+  <%= form.text_field :city %>
+  <%= form.text_field :dob %>
+  <%= form.text_field :number %>
+  <%= form.number_field :authen_id,id: :user_authen_id,value: current_authen.id, type: :hidden%>
+  <%= form.submit "Create User" %>
+<% end %>

@@ -1,0 +1,16 @@
+<h1>Users Info</h1>
+<% if authen_signed_in?%>
+<% @users.each do |user|%>
+<% if current_authen.id == user.authen_id%>
+<ul class='list-group'>
+    <li >Name: <%=link_to user.name, user,class:"text-secondary text-decoration-none"%></li>
+    <p class="text-right">Age: <%= user.age%></p>
+    <p class="text-right">City: <%= user.city%></p>
+    <p>Dob: <%= user.dob%></p>
+    <p>Number: <%= user.number%></p>
+    </ul>
+    <%end%>
+<%end%>
+    <% link_to 'New Article',new_user_path ,class:"btn btn-success"%>
+</ul>
+<%end%>

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <h2><%= link_to 'Users',root_path,class:'navbar-brand'%></h2>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+         <%= link_to 'Home',root_path,class:'navbar-brand'%>
+      </li>
+      <% if authen_signed_in? %>
+
+          <li class="nav-item ">
+            <%= link_to 'Add New',new_user_path,class:'navbar-brand'%>
+          </li>
+      
+         <li class="nav-item ">
+          <%= link_to 'Sign Out',destroy_authen_session_path, data: {turbo_method: :delete},class:'navbar-brand'%>
+        </li>
+
+        <li class="nav-item ">
+          <%= link_to 'Edit Profile',edit_authen_registration_path,class:'navbar-brand'%>
+        </li>
+
+      <% else %>
+      <li class="nav-item ">
+        <%= link_to 'Sign Up',new_authen_registration_path,class:'navbar-brand'%>
+      </li>
+      <li class="nav-item ">
+      
+        <%= link_to 'Sign In',new_authen_session_path,class:'navbar-brand'%>
+      </li>
+
+     <% end %>
+    </ul>
+    
+  </div>
+</nav>
