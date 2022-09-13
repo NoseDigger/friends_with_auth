@@ -3,7 +3,7 @@
 <% @users.each do |user|%>
 <% if current_authen.id == user.authen_id%>
 <ul class='list-group'>
-    <li >Name: <%=link_to user.name, user,class:"text-secondary text-decoration-none"%></li>
+    <li>Name: <%=link_to user.name, user,class:"text-secondary text-decoration-none"%></li>
     <p class="text-right">Age: <%= user.age%></p>
     <p class="text-right">City: <%= user.city%></p>
     <p>Dob: <%= user.dob%></p>
